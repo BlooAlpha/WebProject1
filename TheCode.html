@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code</title>
+    <link rel="stylesheet" href="css\thecode.css">
+</head>
+
+<body>
+    <section class="container">
+        <div id="x" onClick="myfunction()" class="box"><img src=3d-metal-star-isolated_1308-117760.jpg height="80%" width="90%"></div>
+        <div id="box2" onclick="boxClick(2, chosenColor)" class="box2">box</div>
+        <div id="box3" onclick="boxClick(3, chosenColor)" class="box3">box</div>
+        <div id="box4" onclick="boxClick(4, chosenColor)" class="box4">box</div>
+        <div id="box5" onclick="boxClick(5, chosenColor)" class="box5">box</div>
+    </section>
+    <!-- <section>
+        <button onclick="colorPick('red')">RED</button>
+        <button onclick="colorPick('green')">GREEN</button>
+        <button onclick="colorPick('yellow')">YELLOW</button>
+        <button onclick="colorPick('blue')">BLUE</button>
+    </section> -->
+    <section class="colorContainer">
+        <div onclick="colorPick('red')" style="background-color: red;"></div>
+        <div onclick="colorPick('yellow')" style="background-color: yellow;"></div>
+        <div onclick="colorPick('green')" style="background-color: green;"></div>
+        <div onclick="colorPick('blue')" style="background-color: blue;"></div>
+    </section>
+    <p id="tag" style="max-width: 580px; text-align: center;">Current Color: </p>
+    
+    <script>
+        function myfunction() {
+            /* alert("Div clicked!");
+            console.log("clicked!!!!"); */
+            document.getElementById("x").innerHTML = "Whoa you found star!!!";
+        }
+
+        let chosenColor = 'red';
+        colorPick(chosenColor);
+        function colorPick(color) {
+            chosenColor = color;
+            console.log(chosenColor)
+            document.getElementById('tag').innerHTML = "Current Color: " + chosenColor;
+        }
+        
+        function boxClick(boxID, color) {
+            document.getElementById("box" + boxID).innerHTML = "Click!";
+            document.getElementById("box" + boxID).style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

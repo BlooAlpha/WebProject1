@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOO</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+
+        getSite();
+        function getSite(){
+            /* HTML */
+            document.getElementById('app').innerHTML += `
+            <button onclick="hide()"><img src="dntprss.jpg"; width=50px; height=50px;></button>
+            <a href="TheCode.html"> The Code!! </a>
+            
+            `
+        }
+
+        function hide(){
+            /* HTML */
+            document.getElementById('app').innerHTML = `
+            <p>Bepis</p>
+            <button onclick="show()">Go Back!</button>`
+            /* getSite(); */
+            
+        }
+        function show(){
+            /* HTML */
+            document.getElementById('app').innerHTML = "";
+            getSite();
+            
+        }
+    </script>
+</body>
+</html>
